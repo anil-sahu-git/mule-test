@@ -1,0 +1,9 @@
+http:
+  port: "8081"
+  
+  
+american:
+  host: "training4-american-api-sahu.asia.cloudhub.io"
+  port: "80"
+  basepath: "/"
+  protocol: "HTTP"
