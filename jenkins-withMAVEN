@@ -13,7 +13,7 @@ pipeline {
 		}
 		steps{
 		withMaven(maven: 'Maven 3.8.4') {
-		sh "mvn clean install deploy -DmuleDeploy -Dusername=asahu -Dpassword=anilrocks@Capiot18 -Denvironment=Sandbox -DworkerType=MICRO -Dworkers=1 -Dregion=us-west-2"
+		sh "mvn clean install deploy -DmuleDeploy -Dusername=asahu -Dpassword=Anypoint@Dec21 -Denvironment=Sandbox -DworkerType=MICRO -Dworkers=1 -Dregion=us-west-2"
 		
 		}
 	}
