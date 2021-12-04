@@ -3,7 +3,7 @@ pipeline {
 	
 	tools{
 	
-	    maven "Maven 3.8.4"
+	    maven "M3"
 	}
 	
 	stages{
@@ -12,7 +12,7 @@ pipeline {
 		ANYPOINT_CREDENTIALS = credentials('wp.anypoint.credentials')
 		}
 		steps{
-		withMaven(maven: 'Maven 3.3.9') {
+		withMaven(maven: 'Maven 3.8.4') {
 		sh "mvn clean install deploy -DmuleDeploy -Dusername=${ANYPOINT_CREDENTIALS_USR} -Dpassword=${ANYPOINT_CREDENTIALS_psw} -Denvironment=Sandbox -DworkerType=MICRO -Dworkers=1 -Dregion=us-west-2"
 		
 		}
