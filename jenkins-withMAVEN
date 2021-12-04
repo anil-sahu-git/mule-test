@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+	
+	tools{
+	
+	    maven "Maaven 3.3.9"
+	}
+	
+	stages{
+	    stage('Build'){
+		environment{
+		ANYPOINT_CREDENTIALS = credentials('wp.anypoint.credentials')
+		}
+		steps{
+		withMaven(maven: 'Maven 3.3.9') {
+		sh "mvn clean install deploy -DmuleDeploy -Dusername=asahu -Dpassword=anilrocks@Capiot18
+		-Denvironment=Sandbox -DworkerType=MICRO -Dworkers=1 -Dregion=us-west-2"
+		
+		}
+	}
+}
+}
+}
